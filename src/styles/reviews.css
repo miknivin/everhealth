@@ -1,0 +1,27 @@
+.reviews-swiper .swiper-button-next,
+.reviews-swiper .swiper-button-prev {
+    display: none;
+}
+
+.reviews-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #802367;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.reviews-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 32px;
+    border-radius: 6px;
+}
+
+.reviews-swiper .swiper-slide {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.reviews-swiper .swiper-slide-active {
+    opacity: 1;
+}

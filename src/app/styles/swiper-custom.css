@@ -1,0 +1,78 @@
+/* Product Image Gallery Swiper Styles */
+
+/* Main Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #802367;
+    box-shadow: 0 4px 12px rgba(128, 35, 103, 0.3);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
+    color: white;
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #d1d5db;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #802367;
+    width: 24px;
+    border-radius: 5px;
+}
+
+/* Thumbnail Swiper */
+.thumbs-swiper {
+    padding: 8px 0;
+}
+
+.thumbs-swiper .swiper-slide {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.thumbs-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.thumbs-swiper .swiper-slide-thumb-active>div {
+    border-color: #802367 !important;
+    box-shadow: 0 0 0 1px #802367;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 14px !important;
+    }
+}
