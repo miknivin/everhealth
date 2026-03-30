@@ -61,8 +61,14 @@ export function ProductList() {
   const products = data?.allProducts || [];
 
   const formattedProducts = products.map((product: any) => {
-    const price = product.price || 0;
-    const discountPrice = product.discountPrice || 0;
+    // If variants exist, use the first variant's prices
+    const hasVariants = product.variants && product.variants.length > 0;
+    const basePrice = hasVariants ? (product.variants[0].price || 0) : (product.price || 0);
+    const baseDiscountPrice = hasVariants ? (product.variants[0].discountPrice || 0) : (product.discountPrice || 0);
+    
+    const price = basePrice;
+    const discountPrice = baseDiscountPrice;
+    
     const sellingPrice = (discountPrice > 0 && discountPrice < price) ? discountPrice : price;
     const save = price - sellingPrice;
     const discountPercentage = price > 0 ? Math.round((save / price) * 100) : 0;

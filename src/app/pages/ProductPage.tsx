@@ -249,7 +249,7 @@ export function ProductPage() {
               {product.name}
             </h2>
 
-            <StarRating rating={averageRating} reviewCount={reviewCount} />
+            {/* <StarRating rating={averageRating} reviewCount={reviewCount} /> */}
 
             {/* Price & Discount */}
             {discountPercentage > 0 && (
@@ -350,12 +350,12 @@ export function ProductPage() {
             >
               Description
             </button>
-            <button
+            {/* <button
               onClick={() => setActiveTab("Review")}
               className={`text-[14px] font-semibold font-['Roboto',sans-serif] pb-2 transition-colors ${activeTab === "Review" ? "text-[#802367]" : "text-[#222]/75"}`}
             >
               Review
-            </button>
+            </button> */}
           </div>
 
 
@@ -385,7 +385,8 @@ export function ProductPage() {
               )}
             </div>
           ) : (
-            <Reviews />
+            null
+            /* <Reviews /> */
           )}
         </div>
       </div>

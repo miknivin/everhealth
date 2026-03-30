@@ -22,23 +22,23 @@ import { useRouter } from "next/navigation";
 
 function ProductCard({
   title,
-  price,
-  originalPrice,
+  // price,
+  // originalPrice,
   desc,
   imageContent,
   productId
 }: {
   title: string;
-  price: string;
-  originalPrice: string;
+  // price: string;
+  // originalPrice: string;
   desc: string;
   imageContent: React.ReactNode;
   productId: string;
 }) {
   const router = useRouter();
 
-  const handleBuyNow = () => {
-    router.push(`/product/${productId}`);
+  const handleShopNow = () => {
+    router.push(`/products`);
   };
 
   return (
@@ -62,24 +62,24 @@ function ProductCard({
             {desc}
           </p>
 
-          <div className="flex items-end gap-3 mb-6">
+          {/* <div className="flex items-end gap-3 mb-6">
             <span className="text-[24px] md:text-[30px] lg:text-[32px] font-['Roboto',sans-serif] font-semibold text-[#802367] leading-none">
               Rs. {price}/-
             </span>
             <span className="text-[18px] md:text-[22px] lg:text-[24px] font-['Roboto',sans-serif] font-medium text-[#802367]/75 line-through leading-none decoration-[#802367]/75">
               {originalPrice}/-
             </span>
-          </div>
+          </div> */}
 
           <div className="flex items-center gap-[15px] w-full lg:w-auto justify-center lg:justify-start">
             {/* Buy Now Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={handleBuyNow}
+              onClick={handleShopNow}
               className="w-[140px] md:w-[150px] h-[45px] md:h-[48px] rounded-[10px] border border-[#802367] flex items-center justify-center filter drop-shadow-[0px_0px_3px_rgba(0,0,0,0.2)] bg-white/5 cursor-pointer"
             >
-              <span className="text-[#802367] font-['Roboto',sans-serif] font-semibold text-[18px] md:text-[19px]">Buy Now</span>
+              <span className="text-[#802367] font-['Roboto',sans-serif] font-semibold text-[18px] md:text-[19px]">Shop Now</span>
             </motion.button>
 
             {/* Cart Button */}
@@ -135,10 +135,10 @@ export function TrendyProducts() {
             {/* Slide 1 - Baby Oil */}
             <ProductCard
               title="Baby Oil"
-              price="599"
-              originalPrice="799"
+              // price="599"
+              // originalPrice="799"
               desc="Our Baby Oil is specially formulated to gently nourish and protect your baby's delicate skin. Enriched with mild, skin-friendly ingredients, it helps lock in moisture and keeps the skin soft, smooth, and healthy"
-              productId="696a0f75792387e531ed1d3d"
+              productId="69c100e3a1ddeb5dc97aed11"
               imageContent={
                 <div className="w-full h-full flex items-center justify-center p-4">
                   <img
@@ -153,8 +153,8 @@ export function TrendyProducts() {
             {/* Slide 2 - Banana Powder */}
             <ProductCard
               title="Raw Banana Powder"
-              price="599"
-              originalPrice="799"
+              // price="599"
+              // originalPrice="799"
               desc="Our Raw Banana Powder is a natural, organic food supplement for babies and adults. It's rich in fiber and essential nutrients, processed naturally to maintain its organic integrity."
               productId="6982e17cbb88e4dd12e2fdfa"
               imageContent={
@@ -171,8 +171,8 @@ export function TrendyProducts() {
             {/* Slide 3 - Jackfruit Powder */}
             <ProductCard
               title="Jackfruit powder"
-              price="599"
-              originalPrice="799"
+              // price="599"
+              // originalPrice="799"
               desc="Our Jackfruit Powder is a natural, organic food supplement for babies and adults. It's rich in fiber and essential nutrients, processed naturally to maintain its organic integrity."
               productId="696a14a7792387e531ed1d81"
               imageContent={

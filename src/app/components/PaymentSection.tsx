@@ -80,11 +80,11 @@ export function PaymentSection({ onPay, cartTotal = 0 }: { onPay: (amount: strin
     <div className="w-full flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       {/* Shipping Method */}
       <div className="w-full">
-        <h3 className="text-[14px] font-['SF_Pro_Display',sans-serif] font-medium text-[#697386] mb-2">Payment method</h3>
+        <h3 className="text-[14px] font-['SF_Pro_Display',sans-serif] font-medium text-[#697386] mb-2">Select Payment Method</h3>
         <div className="w-full bg-white border border-[#3c4257]/10 rounded-[6px] overflow-hidden shadow-sm flex flex-col">
           <ShippingOption
-            label="Prepaid (Online Payment)"
-            duration="Pay now and get free delivery"
+            label="Online Payment (UPI, Cards, Netbanking)"
+            duration="Secure online payment via Razorpay"
             price={`₹${prepaidAmount.toFixed(2)}`}
             selected={selectedMethod === 'prepaid'}
             onSelect={() => setSelectedMethod('prepaid')}
@@ -92,7 +92,7 @@ export function PaymentSection({ onPay, cartTotal = 0 }: { onPay: (amount: strin
           <div className="h-px bg-[#3c4257]/10 w-full" />
           <ShippingOption
             label="Cash on Delivery"
-            duration="Pay when you receive"
+            duration="Pay directly at your doorstep"
             price={`₹${codAmount.toFixed(2)}`}
             selected={selectedMethod === 'cod'}
             onSelect={() => setSelectedMethod('cod')}
@@ -100,23 +100,26 @@ export function PaymentSection({ onPay, cartTotal = 0 }: { onPay: (amount: strin
         </div>
       </div>
 
-      {/* Payment Buttons */}
-      <div className="flex flex-row gap-3 w-full">
-        {selectedMethod === 'prepaid' && (
-          <button
-            onClick={() => onPay(prepaidAmount.toFixed(2), 'prepaid')}
-            className="h-[48px] flex-1 bg-black rounded-[6px] shadow-sm flex items-center justify-center hover:bg-gray-900 transition-colors"
-          >
-            <GooglePayLogo />
-          </button>
-        )}
-
+      {/* Payment Button */}
+      <div className="w-full">
         <button
           onClick={() => onPay(selectedMethod === 'prepaid' ? prepaidAmount.toFixed(2) : codAmount.toFixed(2), selectedMethod)}
-          className="h-[48px] flex-1 bg-[#802367] rounded-[6px] shadow-sm flex items-center justify-center text-white text-[14px] xs:text-[18px] font-['Roboto',sans-serif] font-medium hover:bg-[#6f0a54] transition-colors px-2"
+          className="h-[52px] w-full bg-[#802367] rounded-[8px] shadow-sm flex items-center justify-center text-white text-[16px] xs:text-[20px] font-['Roboto',sans-serif] font-medium hover:bg-[#6f0a54] transition-all hover:shadow-md active:scale-[0.98] border-none"
         >
-          {selectedMethod === 'prepaid' ? `Pay ₹${prepaidAmount.toFixed(2)}` : `Place Order`}
+          {selectedMethod === 'prepaid' ? (
+            <div className="flex items-center gap-2">
+              <span>Pay & Place Order</span>
+              <span className="text-[14px] opacity-80">(via Razorpay)</span>
+            </div>
+          ) : (
+            `Place COD Order (₹${codAmount.toFixed(2)})`
+          )}
         </button>
+        <p className="text-center text-[12px] text-[#697386] mt-3">
+          {selectedMethod === 'prepaid' 
+            ? "Safe & secure encrypted transactions" 
+            : "Please keep the exact amount ready for delivery"}
+        </p>
       </div>
     </div>
   );

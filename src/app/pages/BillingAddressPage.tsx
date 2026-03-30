@@ -164,15 +164,52 @@ export function BillingAddressPage() {
           return;
         }
 
+        // 1. Create order on the backend first
+        const orderResponse = await fetch("/api/razorpay/create-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            amount: totalAmount,
+            shippingInfo: {
+              fullName: `${formData.firstName} ${formData.lastName}`,
+              address: formData.address1,
+              address2: formData.address2,
+              email: formData.email,
+              phoneNo: formData.phone,
+              city: formData.city,
+              zipCode: formData.zipCode,
+              country: formData.country
+            },
+            orderItems: cartItems.map((item: CartItem) => ({
+              product: item.productId,
+              name: item.name,
+              quantity: item.quantity,
+              image: item.image,
+              price: item.price,
+              discountPrice: item.discountPrice,
+              variant: item.variant
+            })),
+            itemsPrice: cartTotal
+          }),
+        });
+
+        const orderData = await orderResponse.json();
+
+        if (!orderData.success) {
+          toast.error(orderData.message || "Failed to initiate payment");
+          return;
+        }
+
         const options = {
           key: razorpayKey,
-          amount: totalAmount * 100, // Razorpay expects amount in paise
+          amount: orderData.amount, // Inherited from order created on server
           currency: "INR",
           name: "Everhealth",
           description: "Payment for your order",
-          image: imgLogo2.src,
+          // image removed as requested
+          order_id: orderData.order_id, // Important for secure integration
           handler: async function (response: any) {
-            // Payment successful, now create the order
+            // Payment successful, now create the order in our DB
             await createOrderInDB(method, totalAmount, response.razorpay_payment_id);
           },
           prefill: {
