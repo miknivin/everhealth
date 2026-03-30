@@ -9,8 +9,17 @@ import imgProduct from "@/assets/bdcb29ea89d3341d85d778aec5bb7b3f6fde78db.png";
 export function Hero() {
   return (
     <section className="relative w-full min-h-[600px] md:min-h-[700px] lg:h-[861px] overflow-hidden bg-[#FBF6F3]">
-      {/* Background Videos */}
-      <div className="absolute inset-0 z-0">
+      {/* Background Fallback Image + Videos */}
+      <div className="absolute inset-0 z-0 bg-[#FBF6F3]">
+        {/* The fallback image shows instantly. If video plays successfully, it fades out. If low power mode blocks video, the image stays forever, hiding the play button. */}
+        <img
+          src={imgBackground.src}
+          className="absolute inset-0 w-full h-full object-cover z-20 pointer-events-none"
+          alt="Background"
+          style={{ transition: "opacity 1s ease" }}
+          id="heroFallbackImage"
+        />
+
         {/* Desktop Video */}
         <video
           autoPlay
@@ -18,8 +27,11 @@ export function Hero() {
           loop
           playsInline
           preload="auto"
-          poster={imgBackground.src}
-          className="hidden lg:block w-full h-full object-cover pointer-events-none"
+          onPlaying={() => {
+            const fallback = document.getElementById('heroFallbackImage');
+            if (fallback) fallback.style.opacity = '0';
+          }}
+          className="hidden lg:block w-full h-full object-cover pointer-events-none z-10 relative"
         >
           <source src="/video1.mp4" type="video/mp4" />
         </video>
@@ -30,8 +42,11 @@ export function Hero() {
           loop
           playsInline
           preload="auto"
-          poster={imgBackground.src}
-          className="block lg:hidden w-full h-full object-cover pointer-events-none"
+          onPlaying={() => {
+            const fallback = document.getElementById('heroFallbackImage');
+            if (fallback) fallback.style.opacity = '0';
+          }}
+          className="block lg:hidden w-full h-full object-cover pointer-events-none z-10 relative"
         >
           <source src="/video2.mp4" type="video/mp4" />
         </video>
