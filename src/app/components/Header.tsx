@@ -72,7 +72,7 @@ export function Header() {
       <div className="max-w-[1280px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="w-[120px] md:w-[145px] lg:w-[160px] h-[36px] md:h-[44px] lg:h-[49px] shrink-0">
-          <img loading="lazy" src={imgLogo.src} alt="Everhealth Logo" className="w-full h-full object-contain" />
+          <img src={imgLogo.src} alt="Everhealth Logo" fetchPriority="high" className="w-full h-full object-contain" />
         </Link>
 
         {/* Navigation - Desktop (Centered) */}

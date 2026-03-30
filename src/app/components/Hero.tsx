@@ -18,6 +18,7 @@ export function Hero() {
           loop
           playsInline
           preload="auto"
+          poster={imgBackground.src}
           className="hidden lg:block w-full h-full object-cover"
         >
           <source src="/video1.mp4" type="video/mp4" />
@@ -29,6 +30,7 @@ export function Hero() {
           loop
           playsInline
           preload="auto"
+          poster={imgBackground.src}
           className="block lg:hidden w-full h-full object-cover"
         >
           <source src="/video2.mp4" type="video/mp4" />
@@ -75,9 +77,10 @@ export function Hero() {
           className="hidden lg:block absolute right-0 top-[30%] -translate-y-1/2 w-[550px]"
         >
           {/* Using Next.js Image for optimization */}
-          <img loading="lazy" src={imgProduct.src}
+          <img 
+            src={imgProduct.src}
             alt="Product"
-            
+            loading="eager"
             fetchPriority="high"
             className="w-full h-auto object-contain drop-shadow-2xl"
           />
