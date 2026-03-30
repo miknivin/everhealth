@@ -42,7 +42,7 @@ function GhMSApoKoImage({ additionalClassNames = "" }: GhMSApoKoImageProps) {
   return (
     <div style={{ maskImage: `url('${imgGhMSApoKo0}')` }} className={clsx("absolute mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px] mask-size-[55px_59px]", additionalClassNames)}>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-full left-[-11.69%] max-w-none top-0 w-[161.56%]" src={imgGhMSApoKo1} />
+        <img alt="" className="absolute h-full left-[-11.69%] max-w-none top-0 w-[161.56%]" src={imgGhMSApoKo1.src} />
       </div>
     </div>
   );
@@ -52,7 +52,7 @@ function MaskGroup() {
   return (
     <div className="absolute contents inset-[14.23%_93.14%_78.18%_2.2%]" data-name="Mask Group">
       <div className="absolute inset-[14.23%_93.14%_78.18%_2.2%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px] mask-size-[55px_55px]" data-name="OhKElOkQ3RE" style={{ maskImage: `url('${imgOhKElOkQ3Re}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgOhKElOkQ3Re1} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgOhKElOkQ3Re1.src} />
       </div>
     </div>
   );

@@ -54,7 +54,7 @@ function ComponentImageAndText({ text, additionalClassNames = "" }: ComponentIma
       </p>
       <div className="absolute aspect-[52/140] left-[38.96%] right-[38.31%] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.25)] top-[15px]" data-name="WhatsApp Image 2025-12-18 at 11.23.50 4">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[129.06%] left-[-64.71%] max-w-none top-[-10.81%] w-[231.32%]" src={imgWhatsAppImage20251218At1123504} />
+          <img alt="" className="absolute h-[129.06%] left-[-64.71%] max-w-none top-[-10.81%] w-[231.32%]" src={imgWhatsAppImage20251218At1123504.src} />
         </div>
       </div>
     </div>

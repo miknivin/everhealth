@@ -70,7 +70,7 @@ function Group34() {
   return (
     <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] ml-[10px] mt-[10px] place-items-start relative" data-name="Group89">
       <div className="[grid-area:1_/_1] ml-0 mt-0 relative size-[22px]" data-name="bag5">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
       </div>
     </div>
   );
@@ -319,7 +319,7 @@ function Group41() {
     <div className="absolute contents left-0 top-0">
       <Group40 />
       <div className="absolute h-[49px] left-[calc(50%-477.5px)] top-[80px] translate-x-[-50%] w-[160px]" data-name="Logo_2">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2.src} />
       </div>
     </div>
   );
@@ -903,7 +903,7 @@ function MaskGroup() {
   return (
     <div className="absolute contents inset-[62.77%_53.13%_34.99%_42.58%]" data-name="Mask Group">
       <div className="absolute inset-[62.77%_53.13%_34.99%_42.58%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px] mask-size-[55px_55px]" data-name="OhKElOkQ3RE" style={{ maskImage: `url('${imgOhKElOkQ3Re}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgOhKElOkQ3Re1} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgOhKElOkQ3Re1.src} />
       </div>
     </div>
   );
@@ -914,7 +914,7 @@ function MaskGroup1() {
     <div className="absolute contents inset-[62.4%_47.81%_35.2%_47.89%]" data-name="Mask Group">
       <div className="absolute inset-[62.4%_47.81%_35.2%_47.89%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px] mask-size-[55px_59px]" data-name="GH-mSApoKO0" style={{ maskImage: `url('${imgGhMSApoKo0}')` }}>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-full left-[-11.69%] max-w-none top-0 w-[161.56%]" src={imgGhMSApoKo1} />
+          <img alt="" className="absolute h-full left-[-11.69%] max-w-none top-0 w-[161.56%]" src={imgGhMSApoKo1.src} />
         </div>
       </div>
     </div>
@@ -925,7 +925,7 @@ function MaskGroup2() {
   return (
     <div className="absolute contents inset-[62.77%_42.5%_34.99%_53.2%]" data-name="Mask Group">
       <div className="absolute inset-[62.77%_42.5%_34.99%_53.2%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px] mask-size-[55px_55px]" data-name="RukI4qZGlQs" style={{ maskImage: `url('${imgOhKElOkQ3Re}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgRukI4QZGlQs} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgRukI4QZGlQs.src} />
       </div>
     </div>
   );
@@ -966,14 +966,14 @@ export default function About() {
     <div className="bg-white relative size-full" data-name="About">
       <div className="absolute h-[444px] left-[799px] top-[140px] w-[483px]" data-name="postcard-easter-palm-sunday-palm-leaves-laid-out-background-old-plaster-with-space 1">
         <div className="absolute inset-0 opacity-25 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-full left-[-86.59%] max-w-none top-0 w-[186.61%]" src={imgPostcardEasterPalmSundayPalmLeavesLaidOutBackgroundOldPlasterWithSpace1} />
+          <img alt="" className="absolute h-full left-[-86.59%] max-w-none top-0 w-[186.61%]" src={imgPostcardEasterPalmSundayPalmLeavesLaidOutBackgroundOldPlasterWithSpace1.src} />
         </div>
       </div>
       <p className="absolute bg-clip-text bottom-[2255px] font-['Inter:Semi_Bold',sans-serif] font-semibold h-[67px] leading-[normal] left-[61px] not-italic text-[55px] translate-y-[100%] w-[247px]" style={{ WebkitTextFillColor: "transparent", backgroundImage: "linear-gradient(96.2438deg, rgba(145, 8, 108, 0.9) 8.3319%, rgb(180, 66, 149) 75.162%)" }}>
         About Us
       </p>
       <div className="absolute h-[49px] left-[62px] top-[78px] w-[160px]" data-name="Logo">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo.src} />
       </div>
       <HeroSection />
       <Frame />
