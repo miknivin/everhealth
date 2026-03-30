@@ -204,7 +204,7 @@ function Group10() {
     <div className="absolute contents left-0 top-0">
       <Group9 />
       <div className="absolute h-[49px] left-[calc(50%-477.5px)] top-[80px] translate-x-[-50%] w-[160px]" data-name="Logo_2">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2.src} />
       </div>
     </div>
   );
@@ -399,7 +399,7 @@ function Group6() {
   return (
     <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] ml-[10px] mt-[10px] place-items-start relative" data-name="Group89">
       <div className="[grid-area:1_/_1] ml-0 mt-0 relative size-[22px]" data-name="bag5">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
       </div>
     </div>
   );
@@ -521,7 +521,7 @@ export default function ContactUs() {
         Contact Us
       </p>
       <div className="absolute h-[49px] left-[62px] top-[78px] w-[160px]" data-name="Logo">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo.src} />
       </div>
       <HeroSection />
       <Frame />

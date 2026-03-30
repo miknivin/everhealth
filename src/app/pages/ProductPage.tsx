@@ -189,8 +189,7 @@ export function ProductPage() {
                   {product.images.map((image: any, index: number) => (
                     <SwiperSlide key={index}>
                       <div className="relative z-10 w-full h-full flex items-center justify-center">
-                        <img
-                          src={image.url}
+                        <imgloading="lazy" src={image.url}
                           alt={image.alt || `${product.name} - Image ${index + 1}`}
                           className="max-w-[70%] max-h-[90%] object-contain drop-shadow-xl"
                         />
@@ -200,8 +199,7 @@ export function ProductPage() {
                 </Swiper>
               ) : (
                 <div className="relative z-10 w-[50%] md:w-[45%] lg:w-[40%]">
-                  <img
-                    src={typeof productImage === 'string' ? productImage : productImage.src}
+                  <imgloading="lazy" src={typeof productImage === 'string' ? productImage : productImage.src}
                     alt={product.name}
                     className="w-full h-auto object-contain drop-shadow-xl"
                   />
@@ -231,8 +229,7 @@ export function ProductPage() {
                 {product.images.map((image: any, index: number) => (
                   <SwiperSlide key={index}>
                     <div className="cursor-pointer border-2 border-transparent hover:border-[#802367] rounded-lg overflow-hidden transition-all duration-200 aspect-square">
-                      <img
-                        src={image.url}
+                      <imgloading="lazy" src={image.url}
                         alt={image.alt || `Thumbnail ${index + 1}`}
                         className="w-full h-full object-cover"
                       />
@@ -326,7 +323,7 @@ export function ProductPage() {
               <button
                 onClick={handleAddToCart}
                 className="h-[36px] md:h-[40px] w-[36px] md:w-[40px] bg-[#802367] rounded-[10px] shadow-sm flex items-center justify-center hover:bg-[#6f0a54] transition-colors">
-                <img src={imgBag5.src} alt="Cart" className="w-[16px] h-[16px] object-contain" />
+                <img loading="lazy" src={imgBag5.src} alt="Cart" className="w-[16px] h-[16px] object-contain" />
               </button>
             </div>
           </div>

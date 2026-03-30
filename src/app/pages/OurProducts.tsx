@@ -50,7 +50,7 @@ function ProductCard({ product, isHighlighted }: { product: any; isHighlighted?:
 
          {/* Image Area */}
          <div className="h-[180px] w-full relative flex items-center justify-center p-4">
-            <img src={typeof product.img === 'string' ? product.img : product.img.src} alt={product.name} className="h-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" />
+            <img loading="lazy" src={typeof product.img === 'string' ? product.img : product.img.src} alt={product.name} className="h-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" />
          </div>
 
          {/* Discount Badge */}
@@ -90,7 +90,7 @@ function CategoryItem({ label }: { label: string }) {
 
             {/* Bottle Image - Centered and slightly overlapping if needed */}
             <div className="relative w-[40px] h-[110px] z-10 -mt-3 shadow-md">
-               <img src={imgBottle.src} alt={label} className="w-full h-full object-contain" />
+               <img loading="lazy" src={imgBottle.src} alt={label} className="w-full h-full object-contain" />
             </div>
          </div>
          <span className="text-[14px] text-[#222] font-['Roboto',sans-serif]">{label}</span>
@@ -176,7 +176,7 @@ export function OurProducts() {
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#802367]/25 blur-[60px] rounded-full pointer-events-none" />
 
                   <div className="relative z-10 w-full max-w-[428px]">
-                     <img src={imgBaby.src} alt="Baby" className="w-full h-auto object-contain" />
+                     <img loading="lazy" src={imgBaby.src} alt="Baby" className="w-full h-auto object-contain" />
                   </div>
                </div>
             </div>

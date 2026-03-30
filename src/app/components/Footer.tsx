@@ -23,7 +23,7 @@ export function Footer() {
           {/* Column 1: Logo & Contact */}
           <div className="flex flex-col gap-3">
             <Link href="/" className="w-[160px] block">
-              <img src={imgLogo2.src} alt="EverHealth" className="w-full h-auto" />
+              <img loading="lazy" src={imgLogo2.src} alt="EverHealth" className="w-full h-auto" />
             </Link>
 
             <div className="flex flex-col gap-2 mt-1">

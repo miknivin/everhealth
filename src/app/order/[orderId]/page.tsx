@@ -145,7 +145,7 @@ export default function OrderDetailsPage() {
                                 <div key={index} className="flex items-center gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-100">
                                     <div className="w-20 h-20 bg-white rounded-xl overflow-hidden border border-gray-100 flex-shrink-0">
                                         <img
-                                            src={item.image}
+                                            loading="lazy" src={item.image}
                                             alt={item.name}
                                             className="w-full h-full object-cover"
                                         />

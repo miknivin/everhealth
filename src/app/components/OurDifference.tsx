@@ -52,7 +52,7 @@ function Thumbnail({ img, title, active, onClick }: { img: any; title: string; a
       className={`flex items-center gap-3 px-4 py-2 rounded-full cursor-pointer transition-all ${active ? "bg-white shadow-md scale-105 border border-[#91086c]/20" : "bg-transparent opacity-60 hover:opacity-100 hover:bg-white/50"}`}
     >
       <div className="w-[36px] lg:w-[44px] h-[36px] lg:h-[44px] rounded-full overflow-hidden bg-white shrink-0 shadow-sm border border-[#F5F5F5]">
-        <img src={typeof img === 'string' ? img : img.src} alt={title} className="w-full h-full object-cover" />
+        <img loading="lazy" src={typeof img === 'string' ? img : img.src} alt={title} className="w-full h-full object-cover" />
       </div>
       <span className={`text-[12px] lg:text-[14px] font-['Roboto',sans-serif] font-medium whitespace-nowrap ${active ? "text-[#91086c]" : "text-[#7c5f47]"}`}>
         {title}
@@ -89,8 +89,7 @@ export function OurDifference() {
             <div
               className="absolute inset-0 bg-[#FFDABC]/30 z-0"
             />
-            <img
-              src={typeof currentProduct.image === 'string' ? currentProduct.image : (currentProduct.image as any).src}
+            <imgloading="lazy" src={typeof currentProduct.image === 'string' ? currentProduct.image : (currentProduct.image as any).src}
               alt={currentProduct.title}
               className="absolute inset-0 w-full h-full object-cover"
             />

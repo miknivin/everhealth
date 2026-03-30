@@ -62,8 +62,7 @@ export function CartPage() {
                   <div key={`${item.productId}-${item.variant?.size || 'default'}`} className="relative flex flex-col sm:flex-row items-center gap-6 border-b pb-8">
                     {/* Image */}
                     <div className="w-[140px] h-[187px] bg-[#f0eeed] rounded-[13px] overflow-hidden flex items-center justify-center shrink-0 p-2">
-                      <img
-                        src={item.image}
+                      <imgloading="lazy" src={item.image}
                         alt={item.name}
                         className="max-w-full max-h-full object-contain"
                       />

@@ -17,6 +17,7 @@ export function Hero() {
           muted
           loop
           playsInline
+          preload="auto"
           className="hidden lg:block w-full h-full object-cover"
         >
           <source src="/video1.mp4" type="video/mp4" />
@@ -27,6 +28,7 @@ export function Hero() {
           muted
           loop
           playsInline
+          preload="auto"
           className="block lg:hidden w-full h-full object-cover"
         >
           <source src="/video2.mp4" type="video/mp4" />
@@ -72,9 +74,11 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="hidden lg:block absolute right-0 top-[30%] -translate-y-1/2 w-[550px]"
         >
-          <img
-            src={imgProduct.src}
+          {/* Using Next.js Image for optimization */}
+          <img loading="lazy" src={imgProduct.src}
             alt="Product"
+            
+            fetchPriority="high"
             className="w-full h-auto object-contain drop-shadow-2xl"
           />
         </motion.div>

@@ -62,8 +62,7 @@ export function About() {
             {/* Palm Leaves Image - Extra large to reach the Mission/Vision sections on desktop */}
             <div className="absolute top-[80px] md:top-[100px] lg:top-[120px] right-0 w-[300px] md:w-[500px] lg:w-[1000px] h-[400px] md:h-[600px] lg:h-[1200px] opacity-40 md:opacity-50 lg:opacity-60 pointer-events-none z-0">
                <div className="w-full h-full overflow-hidden relative">
-                  <img
-                     src={imgPostcard.src}
+                  <imgloading="lazy" src={imgPostcard.src}
                      alt="Palm Leaves"
                      className="w-full h-full object-contain object-right-top transform lg:scale-110"
                   />

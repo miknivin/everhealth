@@ -72,7 +72,7 @@ export function Header() {
       <div className="max-w-[1280px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="w-[120px] md:w-[145px] lg:w-[160px] h-[36px] md:h-[44px] lg:h-[49px] shrink-0">
-          <img src={imgLogo.src} alt="Everhealth Logo" className="w-full h-full object-contain" />
+          <img loading="lazy" src={imgLogo.src} alt="Everhealth Logo" className="w-full h-full object-contain" />
         </Link>
 
         {/* Navigation - Desktop (Centered) */}
@@ -156,8 +156,7 @@ export function Header() {
                           className="flex items-center gap-3 px-4 py-2 hover:bg-[#802367]/5 transition-colors text-left"
                         >
                           {product.images && product.images[0] && (
-                            <img
-                              src={product.images[0].url}
+                            <imgloading="lazy" src={product.images[0].url}
                               alt={product.name}
                               className="w-8 h-8 object-cover rounded-md"
                             />
@@ -209,7 +208,7 @@ export function Header() {
                 className="w-[41px] h-[41px] bg-[#802367] rounded-[13px] shadow-sm flex items-center justify-center relative"
               >
                 <div className="w-[22px] h-[22px]">
-                  <img src={imgBag5.src} alt="Cart" className="w-full h-full object-contain" />
+                  <img loading="lazy" src={imgBag5.src} alt="Cart" className="w-full h-full object-contain" />
                 </div>
                 {cartItemCount > 0 && (
                   <span className="absolute -top-1 -right-1 bg-[#FF3333] text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">

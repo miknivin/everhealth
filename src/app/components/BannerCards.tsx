@@ -14,8 +14,7 @@ export function BannerCards() {
                     onClick={() => router.push('/product-page')}
                     className="relative overflow-hidden rounded-[13px] h-[120px] md:h-[180px] lg:h-[209px] cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
                 >
-                    <img
-                        src="/Group 1.png"
+                    <imgloading="lazy" src="/Group 1.png"
                         alt="Product Banner"
                         style={{
                             objectFit: 'cover',
@@ -32,8 +31,7 @@ export function BannerCards() {
                     onClick={() => router.push('/product-page')}
                     className="relative overflow-hidden rounded-[13px] h-[120px] md:h-[180px] lg:h-[209px] cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
                 >
-                    <img
-                        src="/Group 2.png"
+                    <imgloading="lazy" src="/Group 2.png"
                         alt="Product Banner"
                         style={{
                             objectFit: 'cover',

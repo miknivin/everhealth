@@ -248,7 +248,7 @@ function Group10() {
     <div className="absolute contents left-0 top-0">
       <Group9 />
       <div className="absolute h-[49px] left-[calc(50%-477.5px)] top-[80px] translate-x-[-50%] w-[160px]" data-name="Logo_2">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2.src} />
       </div>
     </div>
   );
@@ -441,7 +441,7 @@ function Group6() {
   return (
     <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] ml-[10px] mt-[10px] place-items-start relative" data-name="Group89">
       <div className="[grid-area:1_/_1] ml-0 mt-0 relative size-[22px]" data-name="bag5">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
       </div>
     </div>
   );
@@ -469,7 +469,7 @@ function Frame4() {
   return (
     <div className="absolute bg-[#f0eeed] h-[187px] left-[152px] overflow-clip rounded-[13px] top-[304px] w-[140px]">
       <div className="absolute h-[153px] left-[23px] top-[17px] w-[94px]" data-name="ChatGPTImageDec17,2025,04_58_50PM11_8">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm118.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm118.src} />
       </div>
     </div>
   );
@@ -677,7 +677,7 @@ export default function Cart1() {
       </p>
       <p className="absolute bottom-[1515px] font-['Inter:Semi_Bold',sans-serif] font-semibold h-[67px] leading-[normal] left-[61px] not-italic text-[55px] text-[rgba(34,34,34,0.75)] translate-y-[100%] w-[355px]">Our Products</p>
       <div className="absolute h-[49px] left-[62px] top-[78px] w-[160px]" data-name="Logo">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo.src} />
       </div>
       <HeroSection />
       <Frame10 />

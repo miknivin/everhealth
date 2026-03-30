@@ -65,7 +65,7 @@ function WhatsAppImage20251218AtBackgroundImage() {
   return (
     <div className="absolute aspect-[52/140] left-[38.64%] right-[38.64%] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.25)] top-[25px]">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-[129.06%] left-[-64.71%] max-w-none top-[-10.81%] w-[231.32%]" src={imgWhatsAppImage20251218At1123504.src} />
+        <img loading="lazy" alt="" className="absolute h-[129.06%] left-[-64.71%] max-w-none top-[-10.81%] w-[231.32%]" src={imgWhatsAppImage20251218At1123504.src} />
       </div>
     </div>
   );
@@ -78,7 +78,7 @@ function Group320ChatGptImageDec172025045850PmBackgroundImage({ additionalClassN
   return (
     <div className={clsx("[grid-area:1_/_1] aspect-[351/573] relative", additionalClassNames)}>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-[178.71%] left-[-284.33%] max-w-none top-[-58.12%] w-[437.61%]" src={imgChatGptImageDec172025045850Pm2.src} />
+        <img loading="lazy" alt="" className="absolute h-[178.71%] left-[-284.33%] max-w-none top-[-58.12%] w-[437.61%]" src={imgChatGptImageDec172025045850Pm2.src} />
       </div>
     </div>
   );
@@ -98,7 +98,7 @@ function Group322SummerBackgroundImage() {
   return (
     <div className="h-[209px] relative rounded-[13px] w-[172px]">
       <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[13px]">
-        <img alt="" className="absolute h-full left-[-93.87%] max-w-none top-0 w-[193.87%]" src={imgSummer081.src} />
+        <img loading="lazy" alt="" className="absolute h-full left-[-93.87%] max-w-none top-0 w-[193.87%]" src={imgSummer081.src} />
       </div>
     </div>
   );
@@ -140,7 +140,7 @@ function DtBackgroundImage({ text, text1, text2, text3, text4, additionalClassNa
 function ChatGptImageDec172025045850PmBackgroundImage() {
   return (
     <div className="absolute aspect-[492/800] left-[26.43%] right-[28.19%] top-[10px]">
-      <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm11.src} />
+      <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm11.src} />
     </div>
   );
 }
@@ -204,7 +204,7 @@ function Group6() {
   return (
     <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] ml-[10px] mt-[10px] place-items-start relative" data-name="Group89">
       <div className="[grid-area:1_/_1] ml-0 mt-0 relative size-[22px]" data-name="bag5">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
       </div>
     </div>
   );
@@ -274,7 +274,7 @@ function Dt1() {
       <div className="absolute bg-[#802367] inset-[0_0_82.03%_77.53%] rounded-bl-[16px] rounded-tr-[16px]" data-name="Rectangle13_2" />
       <p className="absolute font-['HK_Grotesk:SemiBold',sans-serif] inset-[3.73%_3.52%_85.42%_81.06%] leading-[16px] not-italic text-[14px] text-center text-white">56% OFF</p>
       <div className="absolute aspect-[492/800] left-[26.43%] right-[28.19%] top-[10px]" data-name="ChatGPTImageDec17,2025,04_58_50PM11_2">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm112.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm112.src} />
       </div>
     </div>
   );
@@ -301,7 +301,7 @@ function Dt2() {
       <div className="absolute bg-[#802367] inset-[0_0_82.03%_77.53%] rounded-bl-[16px] rounded-tr-[16px]" data-name="Rectangle13_3" />
       <p className="absolute font-['HK_Grotesk:SemiBold',sans-serif] inset-[3.73%_3.52%_85.42%_81.06%] leading-[16px] not-italic text-[14px] text-center text-white">56% OFF</p>
       <div className="absolute aspect-[492/800] left-[26.43%] right-[28.19%] top-[10px]" data-name="ChatGPTImageDec17,2025,04_58_50PM11_3">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm113.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm113.src} />
       </div>
     </div>
   );
@@ -439,7 +439,7 @@ function Group13() {
       <p className="[grid-area:1_/_1] font-['Roboto:Regular',sans-serif] font-normal leading-[normal] ml-[395px] mt-[159px] relative text-[10px] text-white w-[106px]" style={{ fontVariationSettings: "'wdth' 100" }}>{` 100% Natural products`}</p>
       <div className="[grid-area:1_/_1] h-[153px] ml-[140px] mt-[28px] relative w-[215px]" data-name="IMG_77033">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[147.02%] left-[-54.82%] max-w-none top-[-24.31%] w-[165.06%]" src={imgImg77033.src} />
+          <img loading="lazy" alt="" className="absolute h-[147.02%] left-[-54.82%] max-w-none top-[-24.31%] w-[165.06%]" src={imgImg77033.src} />
         </div>
       </div>
     </div>
@@ -468,12 +468,12 @@ function Group12() {
     <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] ml-[185px] mt-[24px] place-items-start relative">
       <div className="[grid-area:1_/_1] h-[71.439px] ml-[98.27px] mt-[74.92px] relative w-[125.818px]" data-name="bananas1">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[173.63%] left-[-27.2%] max-w-none top-[-37.31%] w-[153.55%]" src={imgBananas1.src} />
+          <img loading="lazy" alt="" className="absolute h-[173.63%] left-[-27.2%] max-w-none top-[-37.31%] w-[153.55%]" src={imgBananas1.src} />
         </div>
       </div>
       <div className="[grid-area:1_/_1] aspect-[240/435] ml-0 mt-[4.88px] relative w-[83.285px]" data-name="delicious-banana-kiwi-fruits1">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-full left-[-0.09%] max-w-none top-0 w-[271.84%]" src={imgDeliciousBananaKiwiFruits1.src} />
+          <img loading="lazy" alt="" className="absolute h-full left-[-0.09%] max-w-none top-0 w-[271.84%]" src={imgDeliciousBananaKiwiFruits1.src} />
         </div>
       </div>
       <Group320ChatGptImageDec172025045850PmBackgroundImage additionalClassNames="ml-[132.77px] mt-[52.27px] w-[59.589px]" />
@@ -488,7 +488,7 @@ function Group14() {
       <Group11 />
       <div className="[grid-area:1_/_1] h-[209px] ml-[355px] mt-0 relative rounded-br-[13px] w-[216px]" data-name="tropical_banner_background 1">
         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-br-[13px]">
-          <img alt="" className="absolute h-[125.18%] left-[-100.66%] max-w-none top-[-25.14%] w-[204.24%]" src={imgTropicalBannerBackground1.src} />
+          <img loading="lazy" alt="" className="absolute h-[125.18%] left-[-100.66%] max-w-none top-[-25.14%] w-[204.24%]" src={imgTropicalBannerBackground1.src} />
         </div>
       </div>
       <Group12 />
@@ -610,7 +610,7 @@ function Group16() {
         </div>
       </div>
       <div className="absolute h-[285.65px] left-[737px] top-[748px] w-[428px]" data-name="unsplash:PyruCs3LPEc">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgUnsplashPyruCs3LpEc.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgUnsplashPyruCs3LpEc.src} />
       </div>
     </div>
   );
@@ -792,7 +792,7 @@ function Group10() {
     <div className="absolute contents left-0 top-0">
       <Group9 />
       <div className="absolute h-[49px] left-[calc(50%-477.5px)] top-[80px] translate-x-[-50%] w-[160px]" data-name="Logo_2">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2.src} />
       </div>
     </div>
   );
@@ -953,7 +953,7 @@ export default function OurProducts() {
         Our Products
       </p>
       <div className="absolute h-[49px] left-[62px] top-[78px] w-[160px]" data-name="Logo">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo.src} />
       </div>
       <HeroSection />
       <HeroSection1 />

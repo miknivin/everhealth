@@ -236,7 +236,7 @@ function Group10() {
     <div className="absolute contents left-0 top-0">
       <Group9 />
       <div className="absolute h-[49px] left-[calc(50%-477.5px)] top-[80px] translate-x-[-50%] w-[160px]" data-name="Logo_2">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo2.src} />
       </div>
     </div>
   );
@@ -429,7 +429,7 @@ function Group6() {
   return (
     <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] ml-[10px] mt-[10px] place-items-start relative" data-name="Group89">
       <div className="[grid-area:1_/_1] ml-0 mt-0 relative size-[22px]" data-name="bag5">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
       </div>
     </div>
   );
@@ -478,10 +478,10 @@ function Group11() {
         </div>
       </div>
       <div className="absolute aspect-[492/800] left-[29.38%] right-[58.36%] top-[536px]" data-name="ChatGPTImageDec17,2025,04_58_50PM11_8">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm118.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm118.src} />
       </div>
       <div className="absolute aspect-[492/800] left-[15.55%] right-[64.92%] top-[428px]" data-name="ChatGPTImageDec17,2025,04_58_50PM11_8">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm119.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgChatGptImageDec172025045850Pm119.src} />
       </div>
     </div>
   );
@@ -533,7 +533,7 @@ function Group16() {
     <div className="absolute contents left-[1038px] top-[787px]">
       <div className="absolute bg-[#802367] left-[1038px] rounded-[13px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.25)] size-[57px] top-[787px]" data-name="Rectangle38" />
       <div className="absolute left-[1053px] size-[28px] top-[802px]" data-name="bag5_2">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgBag5.src} />
       </div>
     </div>
   );
@@ -644,7 +644,7 @@ export default function Products() {
       </p>
       <p className="absolute bottom-[2177px] font-['Inter:Semi_Bold',sans-serif] font-semibold h-[67px] leading-[normal] left-[61px] not-italic text-[55px] text-[rgba(34,34,34,0.75)] translate-y-[100%] w-[355px]">Our Products</p>
       <div className="absolute h-[49px] left-[62px] top-[78px] w-[160px]" data-name="Logo">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo.src} />
+        <img loading="lazy" alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgLogo.src} />
       </div>
       <HeroSection />
       <Frame />

@@ -178,7 +178,7 @@ export function ProfilePage() {
                                         <div className="flex items-center gap-4">
                                             <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center border border-gray-100 shadow-sm relative overflow-hidden">
                                                 {order.orderItems?.[0]?.image ? (
-                                                    <img src={order.orderItems[0].image} alt="Product" className="w-full h-full object-cover" />
+                                                    <img loading="lazy" src={order.orderItems[0].image} alt="Product" className="w-full h-full object-cover" />
                                                 ) : (
                                                     <ShoppingBag className="w-6 h-6 text-[#802367]/30" />
                                                 )}

@@ -89,7 +89,7 @@ function ProductCard({
               className="w-[45px] md:w-[48px] h-[45px] md:h-[48px] rounded-[10px] bg-[#802367] shadow-[0px_0px_3px_rgba(0,0,0,0.2)] flex items-center justify-center"
             >
               <div className="w-[22px] h-[22px] relative">
-                <img src={imgBag5.src} alt="Cart" className="w-full h-full object-contain" />
+                <img loading="lazy" src={imgBag5.src} alt="Cart" className="w-full h-full object-contain" />
               </div>
             </motion.button>
           </div>
@@ -141,8 +141,7 @@ export function TrendyProducts() {
               productId="69c100e3a1ddeb5dc97aed11"
               imageContent={
                 <div className="w-full h-full flex items-center justify-center p-4">
-                  <img
-                    src="/trendyproduct/Baby Oil Mockup_Ever Health_500ml bottle copy.png"
+                  <imgloading="lazy" src="/trendyproduct/Baby Oil Mockup_Ever Health_500ml bottle copy.png"
                     className="max-sm:w-[60%] w-[75%] h-full object-contain"
                     alt="Baby Oil"
                   />
@@ -159,8 +158,7 @@ export function TrendyProducts() {
               productId="6982e17cbb88e4dd12e2fdfa"
               imageContent={
                 <div className="w-full h-full flex items-center justify-center p-4">
-                  <img
-                    src="/trendyproduct/Nendran Raw Banana Powder_Mockup 3 copy.png"
+                  <imgloading="lazy" src="/trendyproduct/Nendran Raw Banana Powder_Mockup 3 copy.png"
                     className="max-sm:w-[60%] w-[75%] h-full object-contain"
                     alt="Raw Banana Powder"
                   />
@@ -177,8 +175,7 @@ export function TrendyProducts() {
               productId="696a14a7792387e531ed1d81"
               imageContent={
                 <div className="w-full h-full flex items-center justify-center p-4">
-                  <img
-                    src="/trendyproduct/Raw Jackfruit Powder_Mockup 3 copy.png"
+                  <imgloading="lazy" src="/trendyproduct/Raw Jackfruit Powder_Mockup 3 copy.png"
                     className="max-sm:w-[60%] w-[75%] h-full object-contain"
                     alt="Jackfruit Powder"
                   />

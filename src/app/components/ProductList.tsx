@@ -20,8 +20,7 @@ function ProductItem({ id, name, price, originalPrice, save, discount, img }: an
 
       {/* Image Area */}
       <div className="h-[180px] w-full relative flex items-center justify-center p-4">
-        <img
-          src={typeof img === 'string' ? img : img.src}
+        <imgloading="lazy" src={typeof img === 'string' ? img : img.src}
           alt={name}
           className="h-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300"
         />
@@ -95,8 +94,7 @@ export function ProductList() {
               onClick={() => router.push('/product-page')}
               className="relative overflow-hidden rounded-[13px] h-[120px] md:h-[180px] lg:h-[209px] cursor-pointer+ transition-transform duration-300 hover:scale-[1.02]"
             >
-              <img
-                src="/Group 1.png"
+              <imgloading="lazy" src="/Group 1.png"
                 alt="Product Banner"
                 style={{
                   objectFit: 'cover',
@@ -113,8 +111,7 @@ export function ProductList() {
               onClick={() => router.push('/product-page')}
               className="relative overflow-hidden rounded-[13px] h-[120px] md:h-[180px] lg:h-[209px] cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
             >
-              <img
-                src="/Group 2.png"
+              <imgloading="lazy" src="/Group 2.png"
                 alt="Product Banner"
                 style={{
                   objectFit: 'cover',
