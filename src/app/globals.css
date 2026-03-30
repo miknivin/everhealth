@@ -75,7 +75,13 @@
         transition: background-color 5000s ease-in-out 0s;
     }
 
-    /* Hide iOS Safari native play button overlay on videos in low-power mode */
+    /* Hide iOS Safari native play button overlay on videos in low-power mode completely */
+    video::-webkit-media-controls { 
+        display: none !important; 
+    }
+    video::-webkit-media-controls-enclosure { 
+        display: none !important; 
+    }
     video::-webkit-media-controls-start-playback-button {
         display: none !important;
         -webkit-appearance: none !important;

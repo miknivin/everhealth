@@ -19,7 +19,7 @@ export function Hero() {
           playsInline
           preload="auto"
           poster={imgBackground.src}
-          className="hidden lg:block w-full h-full object-cover"
+          className="hidden lg:block w-full h-full object-cover pointer-events-none"
         >
           <source src="/video1.mp4" type="video/mp4" />
         </video>
@@ -31,7 +31,7 @@ export function Hero() {
           playsInline
           preload="auto"
           poster={imgBackground.src}
-          className="block lg:hidden w-full h-full object-cover"
+          className="block lg:hidden w-full h-full object-cover pointer-events-none"
         >
           <source src="/video2.mp4" type="video/mp4" />
         </video>
