@@ -55,7 +55,7 @@ export function ProductPage() {
   const id = params.id as string;
   const router = useRouter();
   const dispatch = useDispatch();
-  const { data, isLoading, isError } = useGetProductDetailsQuery(id);
+  const { data, isLoading, isError, isFetching } = useGetProductDetailsQuery(id, { skip: !id });
   const { isAuthenticated } = useSelector((state: RootState) => state.user);
 
   const [selectedVariant, setSelectedVariant] = useState(0);
@@ -123,7 +123,7 @@ export function ProductPage() {
   };
 
 
-  if (isLoading) {
+  if (isLoading || isFetching || !id) {
     return (
       <div className="w-full bg-white min-h-screen pb-[60px] flex items-center justify-center">
         <div className="text-center">
