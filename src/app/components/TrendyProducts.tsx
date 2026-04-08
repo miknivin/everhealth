@@ -141,7 +141,8 @@ export function TrendyProducts() {
               productId="69c100e3a1ddeb5dc97aed11"
               imageContent={
                 <div className="w-full h-full flex items-center justify-center p-4">
-                  <imgloading="lazy" src="/trendyproduct/Baby Oil Mockup_Ever Health_500ml bottle copy.png"
+                  <img
+                    loading="lazy" src="/trendyproduct/Baby Oil Mockup_Ever Health_500ml bottle copy.png"
                     className="max-sm:w-[60%] w-[75%] h-full object-contain"
                     alt="Baby Oil"
                   />
@@ -158,7 +159,8 @@ export function TrendyProducts() {
               productId="6982e17cbb88e4dd12e2fdfa"
               imageContent={
                 <div className="w-full h-full flex items-center justify-center p-4">
-                  <imgloading="lazy" src="/trendyproduct/Nendran Raw Banana Powder_Mockup 3 copy.png"
+                  <img
+                    loading="lazy" src="/trendyproduct/DSC08410.png"
                     className="max-sm:w-[60%] w-[75%] h-full object-contain"
                     alt="Raw Banana Powder"
                   />
@@ -175,7 +177,8 @@ export function TrendyProducts() {
               productId="696a14a7792387e531ed1d81"
               imageContent={
                 <div className="w-full h-full flex items-center justify-center p-4">
-                  <imgloading="lazy" src="/trendyproduct/Raw Jackfruit Powder_Mockup 3 copy.png"
+                  <img
+                    loading="lazy" src="/trendyproduct/DSC08400.png"
                     className="max-sm:w-[60%] w-[75%] h-full object-contain"
                     alt="Jackfruit Powder"
                   />
