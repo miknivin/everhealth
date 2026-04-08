@@ -70,7 +70,7 @@ function ShippingOption({
 }
 
 export function PaymentSection({ onPay, cartTotal = 0 }: { onPay: (amount: string, method: 'prepaid' | 'cod') => void; cartTotal?: number }) {
-  const [selectedMethod, setSelectedMethod] = useState<'prepaid' | 'cod'>('cod');
+  const [selectedMethod, setSelectedMethod] = useState<'prepaid' | 'cod'>('prepaid');
 
   // Calculate amounts based on payment method
   const prepaidAmount = cartTotal;
@@ -82,14 +82,14 @@ export function PaymentSection({ onPay, cartTotal = 0 }: { onPay: (amount: strin
       <div className="w-full">
         <h3 className="text-[14px] font-['SF_Pro_Display',sans-serif] font-medium text-[#697386] mb-2">Select Payment Method</h3>
         <div className="w-full bg-white border border-[#3c4257]/10 rounded-[6px] overflow-hidden shadow-sm flex flex-col">
-          {/* <ShippingOption
+          <ShippingOption
             label="Online Payment (UPI, Cards, Netbanking)"
             duration="Secure online payment via Razorpay"
             price={`₹${prepaidAmount.toFixed(2)}`}
             selected={selectedMethod === 'prepaid'}
             onSelect={() => setSelectedMethod('prepaid')}
           />
-          <div className="h-px bg-[#3c4257]/10 w-full" /> */}
+          <div className="h-px bg-[#3c4257]/10 w-full" />
           <ShippingOption
             label="Cash on Delivery"
             duration="Pay directly at your doorstep"
