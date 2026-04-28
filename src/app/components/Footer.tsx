@@ -14,9 +14,9 @@ import aboutSvgPaths from "../utils/aboutSvgPaths";
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#7C5F47] text-white pt-[24px] pb-[12px] mt-[40px] w-full overflow-hidden">
+    <footer className="relative bg-[#FDF8F5] text-[#802367] pt-[24px] pb-[12px] mt-[40px] w-full overflow-hidden">
       {/* Top Border Line */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-[#FFDABC]" />
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-[#802367]/20" />
 
       <div className="max-w-[1280px] mx-auto px-4 lg:px-[62px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-[16px]">
@@ -33,13 +33,13 @@ export function Footer() {
                 <div className="w-[24px] h-[24px] mt-1">
                   {/* Phone Icon */}
                   <svg width="24" height="24" viewBox="0 0 21 21" fill="none">
-                    <path d={aboutSvgPaths.p90a5500} stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d={aboutSvgPaths.pb0ba700} stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d={aboutSvgPaths.p90a5500} stroke="#802367" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d={aboutSvgPaths.pb0ba700} stroke="#802367" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[16px] font-['Roboto',sans-serif] font-medium">Phone</span>
-                  <a href="tel:+918606914249" className="text-[16px] font-['Roboto',sans-serif] hover:text-[#FFDABC] transition-colors">+91 8606914249</a>
+                  <a href="tel:+918606914249" className="text-[16px] font-['Roboto',sans-serif] hover:text-[#802367]/70 transition-colors">+91 8606914249</a>
                 </div>
               </div>
               {/* 
@@ -53,28 +53,28 @@ export function Footer() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[16px] font-['Roboto',sans-serif] font-medium">WhatsApp</span>
-                  <a href="https://wa.me/918606914249" target="_blank" rel="noopener noreferrer" className="text-[16px] font-['Roboto',sans-serif] hover:text-[#FFDABC] transition-colors">+91 8606914249</a>
+                  <a href="https://wa.me/918606914249" target="_blank" rel="noopener noreferrer" className="text-[16px] font-['Roboto',sans-serif] hover:text-[#802367]/70 transition-colors">+91 8606914249</a>
                 </div>
               </div> */}
 
               <div className="flex items-start gap-3">
                 <div className="w-[24px] h-[24px] mt-1">
                   {/* Email Icon */}
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#802367" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[16px] font-['Roboto',sans-serif] font-medium">Mail</span>
-                  <a href="mailto:everhealth.org@gmail.com" className="text-[16px] font-['Roboto',sans-serif] hover:text-[#FFDABC] transition-colors break-all">everhealth.org@gmail.com</a>
+                  <a href="mailto:everhealth.org@gmail.com" className="text-[16px] font-['Roboto',sans-serif] hover:text-[#802367]/70 transition-colors break-all">everhealth.org@gmail.com</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <div className="w-[24px] h-[24px] mt-1">
                   {/* Location Icon */}
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#802367" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
@@ -90,34 +90,37 @@ export function Footer() {
 
             {/* Social Icons */}
             <div className="flex items-center gap-3 mt-1">
-              {/* Twitter */}
-              <div className="w-[28px] h-[28px] bg-white rounded-full flex items-center justify-center">
-                <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
-                  <path d={aboutSvgPaths.p27bf5700} fill="#802367" />
-                </svg>
-              </div>
               {/* Facebook */}
-              <div className="w-[28px] h-[28px] bg-[#802367] rounded-full flex items-center justify-center">
+              <a 
+                href="https://www.facebook.com/share/14cWhCaVRxC/?mibextid=wwXIfr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-[28px] h-[28px] bg-[#802367] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              >
                 <svg width="7" height="13" viewBox="0 0 7 13" fill="none">
                   <path d={aboutSvgPaths.p16f66d00} fill="white" />
                 </svg>
-              </div>
+              </a>
               {/* Instagram */}
-              <div className="w-[28px] h-[28px] bg-white rounded-full flex items-center justify-center">
+              <a 
+                href="https://www.instagram.com/everhealthindia?igsh=MWkxNXFiNmhtdDNzYg==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-[28px] h-[28px] bg-[#802367] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              >
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d={aboutSvgPaths.pb96a380} fill="#802367" />
-                  <path d={aboutSvgPaths.pb23d800} fill="#802367" />
-                  <path d={aboutSvgPaths.p1d3a1c80} fill="#802367" />
+                  <path d={aboutSvgPaths.pb96a380} fill="white" />
+                  <path d={aboutSvgPaths.pb23d800} fill="white" />
+                  <path d={aboutSvgPaths.p1d3a1c80} fill="white" />
                 </svg>
-              </div>
-
+              </a>
             </div>
           </div>
 
           {/* Column 2: Most Popular Categories */}
           <div>
             <h3 className="font-['HK_Grotesk',sans-serif] font-semibold text-[18px] mb-2">Most Popular Categories</h3>
-            <div className="w-[219px] h-[2px] bg-white mb-2" />
+            <div className="w-[219px] h-[2px] bg-[#802367]/30 mb-2" />
             <ul className="flex flex-col gap-2 font-['Roboto',sans-serif] text-[14px]">
               <li>Staples</li>
               <li>Beverages</li>
@@ -131,25 +134,25 @@ export function Footer() {
           {/* Column 3: Customer Services */}
           <div>
             <h3 className="font-['Roboto',sans-serif] font-normal text-[18px] mb-2">Customer Services</h3>
-            <div className="w-[167px] h-[2px] bg-white mb-2" />
+            <div className="w-[167px] h-[2px] bg-[#802367]/30 mb-2" />
             <ul className="flex flex-col gap-3 font-['Roboto',sans-serif] text-[16px]">
               <li>
-                <Link href="/about" className="hover:text-[#FFDABC] transition-colors">
+                <Link href="/about" className="hover:text-[#802367]/70 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/terms-and-conditions" className="hover:text-[#FFDABC] transition-colors">
+                <Link href="/terms-and-conditions" className="hover:text-[#802367]/70 transition-colors">
                   Terms & Conditions
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="hover:text-[#FFDABC] transition-colors">
+                <Link href="/privacy-policy" className="hover:text-[#802367]/70 transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/cancellation-return-policy" className="hover:text-[#FFDABC] transition-colors">
+                <Link href="/cancellation-return-policy" className="hover:text-[#802367]/70 transition-colors">
                   Cancellation & Return Policy
                 </Link>
               </li>
@@ -158,8 +161,8 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-[#FFDABC] pt-4 text-center">
-          <p className="font-['Roboto',sans-serif] text-[16px] font-normal">
+        <div className="border-t border-[#802367]/20 pt-4 text-center">
+          <p className="font-['Roboto',sans-serif] text-[16px] font-normal text-[#802367]/80">
             © 2022 All rights reserved. Reliance Retail Ltd.
           </p>
         </div>
