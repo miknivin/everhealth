@@ -91,9 +91,9 @@ export function Footer() {
             {/* Social Icons */}
             <div className="flex items-center gap-3 mt-1">
               {/* Facebook */}
-              <a 
-                href="https://www.facebook.com/share/14cWhCaVRxC/?mibextid=wwXIfr" 
-                target="_blank" 
+              <a
+                href="https://www.facebook.com/share/14cWhCaVRxC/?mibextid=wwXIfr"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-[28px] h-[28px] bg-[#802367] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
               >
@@ -102,9 +102,9 @@ export function Footer() {
                 </svg>
               </a>
               {/* Instagram */}
-              <a 
-                href="https://www.instagram.com/everhealthindia?igsh=MWkxNXFiNmhtdDNzYg==" 
-                target="_blank" 
+              <a
+                href="https://www.instagram.com/everhealthindia?igsh=MWkxNXFiNmhtdDNzYg=="
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-[28px] h-[28px] bg-[#802367] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
               >
@@ -163,7 +163,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="border-t border-[#802367]/20 pt-4 text-center">
           <p className="font-['Roboto',sans-serif] text-[16px] font-normal text-[#802367]/80">
-            © 2022 All rights reserved. Reliance Retail Ltd.
+            © 2022 All rights reserved. Everhealth.
           </p>
         </div>
       </div>
