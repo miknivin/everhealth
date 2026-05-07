@@ -48,10 +48,14 @@ function ProductCard({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="relative w-full max-w-[1036px] min-h-[354px] md:min-h-[400px] mx-auto rounded-[13px] border border-white bg-white/10 backdrop-blur-sm overflow-hidden flex flex-col lg:flex-row items-center"
+        className="relative w-full max-w-[1036px] min-h-[354px] md:min-h-[400px] mx-auto rounded-[24px] border border-[#F0EBE1] bg-[#FCF9F2] shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col lg:flex-row items-center group transition-colors duration-500 hover:bg-[#F5F0E6]"
       >
-        <div className="w-full lg:w-[45%] h-[280px] md:h-[350px] lg:h-[400px] relative shrink-0 overflow-hidden flex items-center justify-center">
-          {imageContent}
+        <div className="w-full lg:w-[45%] h-[280px] md:h-[350px] lg:h-[400px] relative shrink-0 flex items-center justify-center p-4 md:p-6 lg:p-8">
+          {/* Cream color blob behind the product for more depth */}
+          <div className="absolute w-[60%] h-[60%] rounded-full bg-[#EAE0D3] blur-[50px] z-0" />
+          <div className="relative z-10 w-full h-full flex items-center justify-center">
+            {imageContent}
+          </div>
         </div>
 
         <div className="flex-1 flex flex-col items-start p-6 md:p-8 lg:p-0 lg:pr-[50px] w-full">
@@ -111,9 +115,9 @@ export function TrendyProducts() {
     autoplaySpeed: 5000,
     pauseOnHover: true,
     customPaging: (i: number) => (
-      <div className="w-[12px] h-[12px] bg-[#802367] rounded-full opacity-50 hover:opacity-100 transition-opacity mt-4" />
+      <div className="w-[12px] h-[12px] bg-[#802367] rounded-full opacity-50 hover:opacity-100 transition-opacity" />
     ),
-    dotsClass: "slick-dots !bottom-[-10px]", // Move dots closer to the content
+    dotsClass: "slick-dots !bottom-[-40px]",
   };
 
   return (
@@ -130,7 +134,7 @@ export function TrendyProducts() {
           Our Trendy Product
         </h2>
 
-        <div className="pb-2">
+        <div className="pb-12">
           <Slider {...sliderSettings}>
             {/* Slide 1 - Baby Oil */}
             <ProductCard

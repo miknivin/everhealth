@@ -171,9 +171,9 @@ export function ProductPage() {
           {/* Left Column - Image Gallery */}
           <div className="relative w-full">
             {/* Main Image Swiper */}
-            <div className="relative h-[400px] md:h-[450px] lg:h-[500px] w-full flex items-center justify-center mb-4">
+            <div className="relative h-[400px] md:h-[450px] lg:h-[500px] w-full flex items-center justify-center mb-6 bg-[#f8f8f8] rounded-[24px] border border-[#eaeaea] shadow-sm overflow-hidden p-6">
               {/* Background Blob/Shadow effect */}
-              <div className="absolute w-[80%] h-[20%] bottom-[10%] bg-black/5 blur-[20px] rounded-full" />
+              <div className="absolute w-[70%] h-[15%] bottom-[15%] bg-black/5 blur-[25px] rounded-full" />
 
               {product.images && product.images.length > 0 ? (
                 <Swiper
@@ -242,14 +242,14 @@ export function ProductPage() {
 
           {/* Right Column - Details */}
           <div className="flex flex-col">
-            <h2 className="text-[18px] md:text-[22px] lg:text-[24px] font-['Roboto',sans-serif] font-semibold text-[#222] mb-1 leading-tight">
+            <h2 className="text-[24px] md:text-[32px] lg:text-[38px] font-['Roboto',sans-serif] font-bold text-[#222] mb-4 leading-tight">
               {product.name}
             </h2>
 
             {/* <StarRating rating={averageRating} reviewCount={reviewCount} /> */}
 
             {/* Price & Discount */}
-            {discountPercentage > 0 && (
+            {false && discountPercentage > 0 && (
               <div className="flex items-center gap-4 mb-6 mt-4">
                 <div className="bg-[#802367] text-white text-[14px] font-semibold px-4 py-1 rounded-bl-[10px] rounded-tr-[10px] font-['Roboto',sans-serif]">
                   {discountPercentage}% OFF
@@ -261,10 +261,10 @@ export function ProductPage() {
             )}
 
             <div className="flex items-baseline gap-4 mb-8">
-              <span className="text-[28px] md:text-[32px] font-semibold text-[#222] font-['Roboto',sans-serif]">
+              <span className="text-[36px] md:text-[42px] font-bold text-[#802367] font-['Roboto',sans-serif]">
                 ₹{sellingPrice}
               </span>
-              {discountPercentage > 0 && (
+              {false && discountPercentage > 0 && (
                 <span className="text-[18px] md:text-[20px] font-semibold text-[#222]/75 line-through decoration-solid font-['Roboto',sans-serif]">
                   ₹{price}
                 </span>
@@ -273,39 +273,42 @@ export function ProductPage() {
 
             {/* Size/Variant Selector */}
             {product.variants && product.variants.length > 0 && (
-              <div className="flex gap-4 mb-8 flex-wrap">
-                {product.variants.map((variant: any, index: number) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedVariant(index)}
-                    className={`px-6 py-1.5 rounded-[13px] text-[14px] font-semibold font-['Roboto',sans-serif] transition-colors ${selectedVariant === index
-                      ? "bg-[#F5F5F5] text-[#222]/75 border-2 border-[#802367]"
-                      : "bg-[#F5F5F5] text-[#222]/75 border-2 border-transparent"
-                      }`}
-                  >
-                    {variant.size}
-                  </button>
-                ))}
+              <div className="mb-8">
+                <span className="block text-[15px] font-medium text-[#222]/80 mb-3 font-['Roboto',sans-serif]">Select Size:</span>
+                <div className="flex gap-3 flex-wrap">
+                  {product.variants.map((variant: any, index: number) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedVariant(index)}
+                      className={`px-6 py-2.5 rounded-[12px] text-[15px] font-semibold font-['Roboto',sans-serif] transition-all duration-300 ${selectedVariant === index
+                        ? "bg-[#802367] text-white shadow-md transform scale-[1.02]"
+                        : "bg-[#f5f5f5] text-[#222]/70 border border-transparent hover:border-[#802367]/30 hover:bg-[#802367]/5"
+                        }`}
+                    >
+                      {variant.size}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
 
             {/* Quantity & Actions */}
-            <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-4 mb-6">
               {/* Quantity Counter */}
-              <div className="flex items-center justify-between border border-[#802367] rounded-[10px] h-[36px] md:h-[40px] w-[110px] md:w-[120px] px-3 shadow-sm bg-white">
+              <div className="flex items-center justify-between border border-[#eaeaea] rounded-[12px] h-[48px] w-[130px] px-4 shadow-sm bg-[#f8f8f8]">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-2.5 h-2.5 flex items-center justify-center">
+                  className="w-3 h-3 flex items-center justify-center hover:opacity-70 transition-opacity">
                   <svg viewBox="0 0 28 4" className="w-full fill-black">
                     <path d={svgPaths.p35b8f000} />
                   </svg>
                 </button>
-                <span className="text-[16px] font-semibold text-[#802367] font-['Roboto',sans-serif]">
+                <span className="text-[18px] font-bold text-[#802367] font-['Roboto',sans-serif]">
                   {quantity}
                 </span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="w-2.5 h-2.5 flex items-center justify-center">
+                  className="w-3 h-3 flex items-center justify-center hover:opacity-70 transition-opacity">
                   <svg viewBox="0 0 28 28" className="w-full fill-black">
                     <path d={svgPaths.p140e3200} />
                   </svg>
@@ -315,15 +318,16 @@ export function ProductPage() {
               {/* Buy Now Button */}
               <button
                 onClick={handleBuyNow}
-                className="h-[36px] md:h-[40px] w-[110px] md:w-[120px] border border-[#802367] rounded-[10px] shadow-sm flex items-center justify-center text-[13px] md:text-[14px] font-semibold text-[#802367] font-['Roboto',sans-serif] hover:bg-[#802367] hover:text-white transition-colors">
+                className="h-[48px] px-8 border-2 border-[#802367] rounded-[12px] shadow-sm flex items-center justify-center text-[15px] font-bold text-[#802367] font-['Roboto',sans-serif] hover:bg-[#802367] hover:text-white transition-all duration-300">
                 Buy Now
               </button>
 
               {/* Cart Button */}
               <button
                 onClick={handleAddToCart}
-                className="h-[36px] md:h-[40px] w-[36px] md:w-[40px] bg-[#802367] rounded-[10px] shadow-sm flex items-center justify-center hover:bg-[#6f0a54] transition-colors">
-                <img loading="lazy" src={imgBag5.src} alt="Cart" className="w-[16px] h-[16px] object-contain" />
+                className="h-[48px] px-6 bg-[#802367] rounded-[12px] shadow-md flex items-center justify-center hover:bg-[#6f0a54] hover:shadow-lg transition-all duration-300 gap-2">
+                <img loading="lazy" src={imgBag5.src} alt="Cart" className="w-[18px] h-[18px] object-contain filter brightness-0 invert" />
+                <span className="text-white font-semibold text-[15px] font-['Roboto',sans-serif] hidden sm:block">Add to Cart</span>
               </button>
             </div>
           </div>

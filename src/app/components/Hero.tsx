@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import imgBackground from "@/assets/4818e82e106630ba07a42e41f1542c927a48718b.png";
-import imgProduct from "@/assets/bdcb29ea89d3341d85d778aec5bb7b3f6fde78db.png";
+import imgProduct from "../../../public/heroimage.png";
 
 export function Hero() {
   return (
@@ -92,7 +92,7 @@ export function Hero() {
           className="hidden lg:block absolute right-0 top-[30%] -translate-y-1/2 w-[550px]"
         >
           {/* Using Next.js Image for optimization */}
-          <img 
+          <img
             src={imgProduct.src}
             alt="Product"
             loading="eager"

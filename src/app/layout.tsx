@@ -4,6 +4,9 @@ import Providers from './Providers';
 export const metadata = {
     title: 'Everhealth',
     description: 'Natural health and wellness products',
+    icons: {
+        icon: '/icon.png',
+    },
 };
 
 export default function RootLayout({

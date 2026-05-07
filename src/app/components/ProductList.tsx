@@ -12,43 +12,25 @@ function ProductItem({ id, name, price, originalPrice, save, discount, img }: an
   const router = useRouter();
   return (
     <motion.div
-      whileHover={{ y: -10 }}
+      whileHover={{ y: -8, boxShadow: "0 12px 24px -8px rgba(0,0,0,0.15)" }}
       onClick={() => router.push(`/product/${id}`)}
-      className="w-full sm:w-[227px] h-[295px] relative shrink-0 rounded-[16px] border border-[#ededed] bg-[#f5f5f5] overflow-hidden flex flex-col group cursor-pointer mx-auto"
+      className="w-full sm:w-[227px] h-[270px] relative shrink-0 rounded-[16px] border border-[#eaeaea] bg-white overflow-hidden flex flex-col group cursor-pointer mx-auto transition-all duration-300 hover:border-[#d0d0d0]"
     >
-      <div className="absolute inset-[0.44%] top-[63.7%] bottom-[0.34%] bg-white rounded-b-[15px]" />
-
       {/* Image Area */}
-      <div className="h-[180px] w-full relative flex items-center justify-center p-4">
-        <imgloading="lazy" src={typeof img === 'string' ? img : img.src}
+      <div className="h-[170px] w-full relative flex items-center justify-center p-5 bg-[#f8f8f8]">
+        <img loading="lazy" src={typeof img === 'string' ? img : img.src}
           alt={name}
-          className="h-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300"
+          className="h-full object-contain drop-shadow-sm group-hover:scale-110 transition-transform duration-500"
         />
       </div>
 
-      {/* Discount Badge */}
-      {discount > 0 && (
-        <div className="absolute top-0 right-0 bg-[#802367] text-white text-[14px] font-['HK_Grotesk',sans-serif] font-semibold px-3 py-1 rounded-bl-[16px]">
-          {discount}% OFF
+      {/* Text Area */}
+      <div className="relative flex flex-col justify-center flex-1 px-4 py-3 bg-white text-center">
+        <h4 className="text-[16px] text-[#333] font-['Roboto',sans-serif] font-medium mb-1 truncate group-hover:text-[#802367] transition-colors">{name}</h4>
+        
+        <div className="flex items-center justify-center mt-1">
+          <span className="text-[20px] text-[#802367] font-['Roboto',sans-serif] font-bold">₹{price}</span>
         </div>
-      )}
-
-      <div className="relative z-10 px-4 mt-2">
-        <h4 className="text-[16px] text-[#222] font-['Roboto',sans-serif] font-normal mb-2 truncate">{name}</h4>
-        <div className="w-full h-[1px] bg-[#EDEDED] mb-2" />
-
-        <div className="flex items-baseline justify-between">
-          <span className="text-[16px] text-[#222] font-['Roboto',sans-serif] font-normal">₹{price}</span>
-          {originalPrice > price && (
-            <span className="text-[16px] text-[#222] font-['Roboto',sans-serif] font-normal line-through decoration-solid decoration-[#222]">₹{originalPrice}</span>
-          )}
-        </div>
-
-        {save > 0 && (
-          <p className="text-[16px] text-[#249b3e] font-['Roboto',sans-serif] font-normal mt-1">
-            Save - ₹{save}
-          </p>
-        )}
       </div>
     </motion.div>
   );
@@ -87,6 +69,7 @@ export function ProductList() {
     <section className="relative w-full pt-0 pb-[15px] lg:pb-[80px] bg-white">
       <div className="max-w-[1280px] mx-auto px-4 lg:px-[62px]">
         {/* Banners */}
+        {false && (
         <div className="row g-4" style={{ display: 'flex', flexWrap: 'nowrap', gap: '0.75rem', marginBottom: '40px', justifyContent: 'center' }}>
           {/* First Card */}
           <div className="col-md-6" style={{ flex: '1 1 50%', maxWidth: '571px' }}>
@@ -122,6 +105,7 @@ export function ProductList() {
             </div>
           </div>
         </div>
+        )}
 
         <div className="flex items-center justify-between mb-[30px] lg:mb-[40px]">
           <h2

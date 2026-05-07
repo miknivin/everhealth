@@ -39,61 +39,39 @@ function ProductCard({ product, isHighlighted }: { product: any; isHighlighted?:
    const router = useRouter();
    return (
       <motion.div
-         whileHover={{ y: -10 }}
+         whileHover={{ y: -8, boxShadow: "0 12px 24px -8px rgba(0,0,0,0.15)" }}
          onClick={() => router.push(`/product/${product.id}`)}
-         className={`w-full sm:w-[227px] md:w-full h-[295px] md:h-[310px] relative shrink-0 rounded-[16px] border overflow-hidden flex flex-col group cursor-pointer mx-auto transition-all duration-300 ${isHighlighted
-            ? 'border-[#802367] border-[3px] shadow-[0_0_20px_rgba(128,35,103,0.5)] scale-105 bg-gradient-to-b from-[#802367]/5 to-white'
-            : 'border-[#ededed] bg-[#f5f5f5]'
+         className={`w-full sm:w-[227px] md:w-full h-[270px] md:h-[280px] relative shrink-0 rounded-[16px] border overflow-hidden flex flex-col group cursor-pointer mx-auto transition-all duration-300 ${isHighlighted
+            ? 'border-[#802367] border-[2px] shadow-[0_0_15px_rgba(128,35,103,0.2)] scale-[1.02] bg-white'
+            : 'border-[#eaeaea] bg-white hover:border-[#d0d0d0]'
             }`}
       >
-         <div className="absolute inset-[0.44%] top-[63.7%] bottom-[0.34%] bg-white rounded-b-[15px]" />
-
          {/* Image Area */}
-         <div className="h-[180px] w-full relative flex items-center justify-center p-4">
-            <img loading="lazy" src={typeof product.img === 'string' ? product.img : product.img.src} alt={product.name} className="h-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" />
+         <div className={`h-[170px] md:h-[180px] w-full relative flex items-center justify-center p-5 ${isHighlighted ? 'bg-gradient-to-b from-[#802367]/5 to-white' : 'bg-[#f8f8f8]'}`}>
+            <img loading="lazy" src={typeof product.img === 'string' ? product.img : product.img.src} alt={product.name} className="h-full object-contain drop-shadow-sm group-hover:scale-110 transition-transform duration-500" />
          </div>
 
-         {/* Discount Badge */}
-         {product.discount > 0 && (
-            <div className="absolute top-0 right-0 bg-[#802367] text-white text-[14px] font-['HK_Grotesk',sans-serif] font-semibold px-3 py-1 rounded-bl-[16px]">
-               {product.discount}% OFF
+         {/* Text Area */}
+         <div className="relative flex flex-col justify-center flex-1 px-4 py-3 bg-white text-center">
+            <h4 className="text-[15px] md:text-[16px] text-[#333] font-['Roboto',sans-serif] font-medium mb-1 truncate group-hover:text-[#802367] transition-colors">{product.name}</h4>
+            <div className="flex items-center justify-center mt-1 gap-2">
+               <span className="text-[18px] md:text-[20px] text-[#802367] font-['Roboto',sans-serif] font-bold">₹{product.price}</span>
             </div>
-         )}
-
-         <div className="relative z-10 px-4 mt-2">
-            <h4 className="text-[16px] text-[#222] font-['Roboto',sans-serif] font-normal mb-2 truncate">{product.name}</h4>
-            <div className="w-full h-[1px] bg-[#EDEDED] mb-2" />
-
-            <div className="flex items-baseline justify-between">
-               <span className="text-[16px] text-[#222] font-['Roboto',sans-serif] font-normal">₹{product.price}</span>
-               {product.oldPrice > product.price && (
-                  <span className="text-[16px] text-[#222] font-['Roboto',sans-serif] font-normal line-through decoration-solid decoration-[#222]">₹{product.oldPrice}</span>
-               )}
-            </div>
-
-            {product.save > 0 && (
-               <p className="text-[16px] text-[#249b3e] font-['Roboto',sans-serif] font-normal mt-1">
-                  Save - ₹{product.save}
-               </p>
-            )}
          </div>
       </motion.div>
    );
 }
 
-function CategoryItem({ label }: { label: string }) {
+function CategoryItem({ label, img }: { label: string, img: string }) {
    return (
-      <div className="flex flex-col items-center gap-4 min-w-[100px]">
-         <div className="w-[100px] h-[100px] relative flex items-center justify-center">
-            {/* Circle Border */}
-            <div className="absolute inset-0 rounded-full border border-[#802367] bg-[#F5F5F5]" />
-
-            {/* Bottle Image - Centered and slightly overlapping if needed */}
-            <div className="relative w-[40px] h-[110px] z-10 -mt-3 shadow-md">
-               <img loading="lazy" src={imgBottle.src} alt={label} className="w-full h-full object-contain" />
+      <div className="flex flex-col items-center gap-2 min-w-[80px]">
+         <div className="w-[72px] h-[72px] relative flex items-center justify-center">
+            {/* Circle Border with Image */}
+            <div className="absolute inset-0 rounded-full border border-[#802367] bg-[#F5F5F5] overflow-hidden flex items-center justify-center">
+               <img loading="lazy" src={img} alt={label} className="w-[85%] h-[85%] object-contain" />
             </div>
          </div>
-         <span className="text-[14px] text-[#222] font-['Roboto',sans-serif]">{label}</span>
+         <span className="text-[14px] text-[#222] font-['Roboto',sans-serif] text-center">{label}</span>
       </div>
    );
 }
@@ -105,15 +83,15 @@ export function OurProducts() {
    const searchQuery = searchParams.get('search')?.toLowerCase() || '';
    const products = data?.allProducts || [];
 
-    const formattedProducts = products.map((product: any) => {
+   const formattedProducts = products.map((product: any) => {
       // If variants exist, use the first variant's prices
       const hasVariants = product.variants && product.variants.length > 0;
       const basePrice = hasVariants ? (product.variants[0].price || 0) : (product.price || 0);
       const baseDiscountPrice = hasVariants ? (product.variants[0].discountPrice || 0) : (product.discountPrice || 0);
-      
+
       const price = basePrice;
       const discountPrice = baseDiscountPrice;
-      
+
       // If discountPrice is present and less than price, use it as selling price.
       // Otherwise, default selling price to price.
       const sellingPrice = (discountPrice > 0 && discountPrice < price) ? discountPrice : price;
@@ -137,18 +115,26 @@ export function OurProducts() {
       ? formattedProducts.filter((p: any) => p.matchesSearch)
       : formattedProducts;
 
+   const categories = [
+      { label: "Coconut Oil", img: "/ourproduct/DSC00030.JPG" },
+      { label: "Baby Oil", img: "/ourproduct/DSC08380.JPG" },
+      { label: "Jackfruit Powder", img: "/ourproduct/DSC08400.JPG" },
+      { label: "Banana Powder", img: "/ourproduct/DSC08402.JPG" },
+      { label: "Nendra Powder", img: "/ourproduct/DSC08410.JPG" },
+   ];
+
    return (
       <div className="w-full bg-white overflow-hidden pb-20">
          <div className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-[62px] pt-[140px] md:pt-[160px] lg:pt-[180px]">
 
             {/* Banner Cards */}
-            <BannerCards />
+            {/* <BannerCards /> */}
 
             {/* Categories */}
             <div className="flex flex-nowrap overflow-x-auto md:flex-wrap md:justify-center gap-4 md:gap-6 lg:gap-8 mb-[70px] md:mb-[80px] pb-4 px-4 -mx-4 md:mx-0 md:px-0 md:pb-0 justify-start">
-               {["Baby Oil", "Baby Oil", "Baby Oil", "Baby Oil", "Baby Oil", "Baby Oil"].map((label, i) => (
+               {categories.map((cat, i) => (
                   <div key={i} className="shrink-0 first:pl-4 lg:first:pl-0 last:pr-4 lg:last:pr-0">
-                     <CategoryItem label={label} />
+                     <CategoryItem label={cat.label} img={cat.img} />
                   </div>
                ))}
             </div>

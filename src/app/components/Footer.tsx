@@ -163,7 +163,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="border-t border-[#802367]/20 pt-4 text-center">
           <p className="font-['Roboto',sans-serif] text-[16px] font-normal text-[#802367]/80">
-            © 2022 All rights reserved. Everhealth.
+            © 2026 All rights reserved. Everhealth.
           </p>
         </div>
       </div>
