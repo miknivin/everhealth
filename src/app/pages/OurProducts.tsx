@@ -98,6 +98,10 @@ export function OurProducts() {
       const save = price - sellingPrice;
       const discountPercentage = price > 0 ? Math.round((save / price) * 100) : 0;
 
+      const variantImage = hasVariants && product.variants[0].imageUrl && product.variants[0].imageUrl.length > 0
+         ? product.variants[0].imageUrl[0]
+         : null;
+
       return {
          id: product._id,
          name: product.name,
@@ -105,7 +109,7 @@ export function OurProducts() {
          oldPrice: price,
          save: save,
          discount: discountPercentage,
-         img: product.images?.[0]?.url || imgProduct1, // Fallback image
+         img: variantImage || product.images?.[0]?.url || product.mainImage || imgProduct1, // Fallback image
          matchesSearch: searchQuery ? product.name.toLowerCase().includes(searchQuery) : false,
       };
    });

@@ -70,7 +70,8 @@ export function ProductPage() {
     const currentVariant = product.variants?.[selectedVariant] || product.variants?.[0];
     const price = currentVariant?.price || product.price || 0;
     const discountPrice = currentVariant?.discountPrice || product.discountPrice || 0;
-    const productImage = product.images?.[0]?.url || product.mainImage || imgProductFront;
+    const variantImage = currentVariant?.imageUrl?.[0];
+    const productImage = variantImage || product.images?.[0]?.url || product.mainImage || imgProductFront;
 
     dispatch(addToCart({
       productId: product._id,
@@ -101,7 +102,8 @@ export function ProductPage() {
     const currentVariant = product.variants?.[selectedVariant] || product.variants?.[0];
     const price = currentVariant?.price || product.price || 0;
     const discountPrice = currentVariant?.discountPrice || product.discountPrice || 0;
-    const productImage = product.images?.[0]?.url || product.mainImage || imgProductFront;
+    const variantImage = currentVariant?.imageUrl?.[0];
+    const productImage = variantImage || product.images?.[0]?.url || product.mainImage || imgProductFront;
 
     // Add to cart first
     dispatch(addToCart({
@@ -157,7 +159,14 @@ export function ProductPage() {
   const sellingPrice = (discountPrice > 0 && discountPrice < price) ? discountPrice : price;
   const save = price - sellingPrice;
   const discountPercentage = price > 0 ? Math.round((save / price) * 100) : 0;
-  const productImage = product.images?.[0]?.url || product.mainImage || imgProductFront;
+  
+  const variantImage = currentVariant?.imageUrl?.[0];
+  const productImage = variantImage || product.images?.[0]?.url || product.mainImage || imgProductFront;
+  
+  const displayImages = currentVariant?.imageUrl && currentVariant.imageUrl.length > 0
+    ? currentVariant.imageUrl.map((url: string) => ({ url, alt: product.name }))
+    : product.images;
+
   const averageRating = product.averageRating || 4;
   const reviewCount = product.reviews?.length || 0;
 
@@ -175,7 +184,7 @@ export function ProductPage() {
               {/* Background Blob/Shadow effect */}
               <div className="absolute w-[70%] h-[15%] bottom-[15%] bg-black/5 blur-[25px] rounded-full" />
 
-              {product.images && product.images.length > 0 ? (
+              {displayImages && displayImages.length > 0 ? (
                 <Swiper
                   modules={[Pagination, Thumbs]}
                   spaceBetween={10}
@@ -186,10 +195,10 @@ export function ProductPage() {
                     '--swiper-pagination-color': '#802367',
                   } as React.CSSProperties}
                 >
-                  {product.images.map((image: any, index: number) => (
+                  {displayImages.map((image: any, index: number) => (
                     <SwiperSlide key={index}>
                       <div className="relative z-10 w-full h-full flex items-center justify-center">
-                        <imgloading="lazy" src={image.url}
+                        <img loading="lazy" src={image.url}
                           alt={image.alt || `${product.name} - Image ${index + 1}`}
                           className="max-w-[70%] max-h-[90%] object-contain drop-shadow-xl"
                         />
@@ -199,7 +208,7 @@ export function ProductPage() {
                 </Swiper>
               ) : (
                 <div className="relative z-10 w-[50%] md:w-[45%] lg:w-[40%]">
-                  <imgloading="lazy" src={typeof productImage === 'string' ? productImage : productImage.src}
+                  <img loading="lazy" src={typeof productImage === 'string' ? productImage : productImage.src}
                     alt={product.name}
                     className="w-full h-auto object-contain drop-shadow-xl"
                   />
@@ -208,7 +217,7 @@ export function ProductPage() {
             </div>
 
             {/* Thumbnail Swiper */}
-            {product.images && product.images.length > 1 && (
+            {displayImages && displayImages.length > 1 && (
               <Swiper
                 onSwiper={setThumbsSwiper}
                 modules={[FreeMode, Thumbs]}
@@ -226,10 +235,10 @@ export function ProductPage() {
                   },
                 }}
               >
-                {product.images.map((image: any, index: number) => (
+                {displayImages.map((image: any, index: number) => (
                   <SwiperSlide key={index}>
                     <div className="cursor-pointer border-2 border-transparent hover:border-[#802367] rounded-lg overflow-hidden transition-all duration-200 aspect-square">
-                      <imgloading="lazy" src={image.url}
+                      <img loading="lazy" src={image.url}
                         alt={image.alt || `Thumbnail ${index + 1}`}
                         className="w-full h-full object-cover"
                       />
