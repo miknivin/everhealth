@@ -14,7 +14,9 @@ import {
     CheckCircle,
     Clock,
     Truck,
-    XCircle
+    XCircle,
+    HelpCircle,
+    RotateCcw
 } from "lucide-react";
 
 export default function OrderDetailsPage() {
@@ -65,6 +67,16 @@ export default function OrderDetailsPage() {
                 return <Clock className="w-5 h-5 text-blue-600" />;
             case 'Cancelled':
                 return <XCircle className="w-5 h-5 text-red-600" />;
+            case 'Return Requested':
+                return <HelpCircle className="w-5 h-5 text-amber-600" />;
+            case 'Return Approved':
+                return <CheckCircle className="w-5 h-5 text-teal-600" />;
+            case 'Return Rejected':
+                return <XCircle className="w-5 h-5 text-rose-600" />;
+            case 'Returned':
+                return <RotateCcw className="w-5 h-5 text-slate-700" />;
+            case 'Refunded':
+                return <CreditCard className="w-5 h-5 text-emerald-600" />;
             default:
                 return <Package className="w-5 h-5 text-orange-600" />;
         }
@@ -80,6 +92,16 @@ export default function OrderDetailsPage() {
                 return 'bg-blue-100 text-blue-600';
             case 'Cancelled':
                 return 'bg-red-100 text-red-600';
+            case 'Return Requested':
+                return 'bg-amber-100 text-amber-600';
+            case 'Return Approved':
+                return 'bg-teal-100 text-teal-600';
+            case 'Return Rejected':
+                return 'bg-rose-100 text-rose-600';
+            case 'Returned':
+                return 'bg-slate-200 text-slate-700';
+            case 'Refunded':
+                return 'bg-emerald-100 text-emerald-600';
             default:
                 return 'bg-orange-100 text-orange-600';
         }

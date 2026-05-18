@@ -191,11 +191,18 @@ export function ProfilePage() {
                                             <div>
                                                 <div className="flex items-center gap-2">
                                                     <span className="font-bold text-[#802367] text-sm">#{order._id.slice(-6).toUpperCase()}</span>
-                                                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${order.orderStatus === 'Delivered' ? 'bg-green-100 text-green-600' :
+                                                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                                                        order.orderStatus === 'Delivered' ? 'bg-green-100 text-green-600' :
                                                         order.orderStatus === 'Processing' ? 'bg-blue-100 text-blue-600' :
-                                                            order.orderStatus === 'Shipped' ? 'bg-purple-100 text-purple-600' :
-                                                                'bg-orange-100 text-orange-600'
-                                                        }`}>
+                                                        order.orderStatus === 'Shipped' ? 'bg-purple-100 text-purple-600' :
+                                                        order.orderStatus === 'Cancelled' ? 'bg-red-100 text-red-600' :
+                                                        order.orderStatus === 'Return Requested' ? 'bg-amber-100 text-amber-600' :
+                                                        order.orderStatus === 'Return Approved' ? 'bg-teal-100 text-teal-600' :
+                                                        order.orderStatus === 'Return Rejected' ? 'bg-rose-100 text-rose-600' :
+                                                        order.orderStatus === 'Returned' ? 'bg-slate-200 text-slate-700' :
+                                                        order.orderStatus === 'Refunded' ? 'bg-emerald-100 text-emerald-600' :
+                                                        'bg-orange-100 text-orange-600'
+                                                    }`}>
                                                         {order.orderStatus}
                                                     </span>
                                                 </div>
